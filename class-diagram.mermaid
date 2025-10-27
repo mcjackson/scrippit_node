@@ -40,3 +40,15 @@ class EntryNote {
 + DateTime DateCreated
 + DateTime DateModified
 }
+
+class ScriptRelation {
+    Guid Id
+    Guid OwnerScriptId
+    String OwnerScriptName
+    String OwnerScriptDescription
+    Guid RelatedScriptId
+    String RelatedScriptName
+    String RelatedScriptDescription
+    Guid CreatedByUserId
+    DateTime DateCreated
+}
