@@ -42,13 +42,35 @@ class EntryNote {
 }
 
 class ScriptRelation {
-    Guid Id
-    Guid OwnerScriptId
-    String OwnerScriptName
-    String OwnerScriptDescription
-    Guid RelatedScriptId
-    String RelatedScriptName
-    String RelatedScriptDescription
-    Guid CreatedByUserId
-    DateTime DateCreated
+    +Guid Id
+    +Guid OwnerScriptId
+    +String OwnerScriptName
+    +String OwnerScriptDescription
+    +Guid RelatedScriptId
+    +String RelatedScriptName
+    +String RelatedScriptDescription
+    +Guid CreatedByUserId
+    +DateTime DateCreated
+}
+
+class User {
+    + Guid Id
+    + String UserName
+    + String FirstName
+    + String LastName
+    + String EMail
+    + String State
+    + String PostalCode
+    + String Country
+    + String City
+    + String About
+    + String ThumbnailUrl
+    + String UserKey
+    + Int32 AccountTypeId
+    + Boolean AcceptedTerms
+    + Int32 FileSizeLimit
+    + Boolean Deleted
+    + DateTime DateCreated
+    + DateTime? DateDeleted
+    + DateTime? DateModified
 }
