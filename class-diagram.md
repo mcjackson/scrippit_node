@@ -1,0 +1,42 @@
+classDiagram
+
+class Script {
++ Guid Id
++ String Name
++ String Description
++ DateTime DateCreated
++ DateTime? DateDeleted
++ DateTimer? DateModified
++ Boolean IsDeleted
++ Guid UserId
++ Guid ModifiedByUserId
++ Boolean IsPublic
++ Boolean IsDemo
++ Int32 ScriptTypeId
++ +List~ScriptEntry~ entries
++ List~String~ Tags
+}
+
+class ScriptEntry {
++ Guid Id
++ Guid ScriptId
++ Int32 SequenceNumber
++ String Content
++ Guid CreatedByUserId
++ DateTime DateCreated
++ Boolean IsDeleted
++ Boolean Completed
++ Boolean IsHeader
++ Int32 EntryTypeId
++ String Url
++ +List~EntryNote~ Notes
+}
+
+class EntryNote {
++ Guid Id
++ Guid ScriptEntryId
++ String Text
++ Boolean Completed
++ DateTime DateCreated
++ DateTime DateModified
+}
